@@ -2,523 +2,1202 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistic-transport</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Logistic Transport</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./media query.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="./images/transport logo.png" type="image">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+
+    <!-- aos animations -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- navigation -->
-    <nav>
-        <div class="nav1">
-            <img src="https://themes.incognitothemes.com/logiport/assets/images/logo.png" alt="">
-        </div>
-        <div class="nav2">
-            <div class="nav2-1">
-                <p><a href=""><span><i class="fa-solid fa-location-dot"></i></span>&nbsp;Find A Location</a></p>
-                <a href=""><span><i class="fa-solid fa-envelope"></i></span>&nbsp;yoursite@domain.com</a>
-            </div>
-            <div class="nav2-2">
-                <a href=""><span><i class="fa-brands fa-facebook-f fa-xl"></i></span></a>
-                <a href=""><span><i class="fa-brands fa-x-twitter fa-xl"></i></span></a>
-                <a href=""><span><i class="fa-brands fa-instagram fa-xl"></i></span></a>
-                <a href=""><span><i class="fa-brands fa-linkedin-in fa-xl"></i></span></a>
-            </div>
-        </div>
-        <div class="empty"></div>
-        <div class="nav3">
-            <div class="nav3-1">
-                <ul>
-                    <li><span>Home</span></li>
-                    <li>About</li>
-                    <li>Service</li>
-                    <li>Blog</li>
-                    <li>Pages</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-            <div class="nav3-2">
-                <button class="btn1"><span><i class="fa-solid fa-magnifying-glass fa-xl"></i></span></button>
-                <button class="btn2">Get Solution</button>
-                <button class="btn"><span><i class="fa-solid fa-bars fa-xl"></i></span></button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- container 1 -->
+    <!-- navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white shadow-md">
 
-    <div class="container1">
-        <div class="image1">
-            <img src="./images/slide-1.jpg" alt="" class="img1"
-                height="854">
-        </div>
-        <div class="image2">
-            <img src="./images/header-1.jpg" alt="" class="img2"
-                height="854">
-        </div>
+        <!-- top bar -->
+        <div class="hidden lg:flex items-center justify-between bg-[#232526] text-white px-10 py-3">
 
-        <div class="content" data-aos="fade-right" data-aos-duration="500">
-            <div>
-                <h3>LOGISTICS & TRANSPORT SEVICES</h3>
-            </div><br>
-            <div>
-                <h1>EXPERIENCES SEAMLESS <br> SHIPPING SOLUTIONS</h1>
-            </div><br>
-            <div>
-                <p>We specialize in fast,reliable,and efficient logistics and transport services <br> to keep your
-                    business
-                    moving forwardon time and with care.</p>
-            </div><br>
-            <div class="btns">
-                <button class="btn3">Contact Us</button>
-                <button class="btn4">Our Mission</button>
+            <div class="flex items-center gap-8 text-sm">
+
+                <a href="#" class="hover:text-[#fd5523] duration-300">
+                    <i class="ri-map-pin-line text-[#fd5523]"></i>
+                    Find A Location
+                </a>
+
+                <a href="#" class="hover:text-[#fd5523] duration-300">
+                    <i class="ri-mail-line text-[#fd5523]"></i>
+                    yoursite@domain.com
+                </a>
+
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="flex items-center gap-4">
+
+                <a href="#" class="hover:text-[#fd5523]">
+                    <i class="ri-facebook-fill"></i>
+                </a>
+
+                <a href="#" class="hover:text-[#fd5523]">
+                    <i class="ri-twitter-x-line"></i>
+                </a>
+
+                <a href="#" class="hover:text-[#fd5523]">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="#" class="hover:text-[#fd5523]">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+
             </div>
         </div>
 
-    </div>
+        <!-- main nav -->
+        <div class="flex items-center justify-between px-4 sm:px-6 lg:px-10 py-4">
 
-    <!-- container 2 -->
+            <!-- logo -->
+            <div class="flex items-center">
 
-    <div class="container2">
-        <div class="box1" data-aos="fade-right" data-aos-duration="1000">
-            <h2>ABOUT US</h2>
-            <h1>Delivering Excellence in Logistics <br> and Transportation</h1>
-            <div class="content">
-                <div class="b1">
-                    <div>
-                        <span><i class="fa-solid fa-truck-ramp-box fa-3x"></i></span>
-                    </div>
-                    <div>
-                        <h3>Reliable Freight Services</h3>
-                    </div>
-                </div>
-                <div class="b2">
-                    <div><i class="fa-solid fa-route fa-3x"></i></div>
-                    <div>
-                        <h3>End-to-End Supply Chain <br>Solutions</h3>
-                    </div>
-                </div>
-            </div>
-            <p>We are a trusted logistics and transport company offering streamlined, cost-effective, and on-time
-                delivery solutions across local and international routes. From warehousing to final-mile delivery, we
-                ensure your cargo is in safe hands.</p>
-            <div class="para">
-                <p><span><i class="fa-solid fa-check fa-lg"></i></span>&nbsp;Timely and secure transportation services.
-                </p>
-                <p><span><i class="fa-solid fa-check fa-lg"></i></span>&nbsp;Integrated warehousing and distribution.
-                </p>
-                <p><span><i class="fa-solid fa-check fa-lg"></i></span>&nbsp;Customized logistics solutions for your
-                    business.</p>
-            </div>
-            <button class="btn5">Contact Us</button>
-        </div>
-        <div class="box2" data-aos="fade-left" data-aos-duration="1000">
-            <div class="one">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/about-1.jpg" alt="" width="100%"
-                    height="600px">
-            </div>
-            <div class="two">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/about-2.jpg" alt=""
-                    width="250px">
-            </div>
-            <div class="three">
-                <h1>25+</h1>
-                <h2>Years of Experience</h2>
-            </div>
-        </div>
-    </div>
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/logo.png" alt="logo"
+                    class="w-[140px] sm:w-[170px]">
 
-    <!-- container 3 -->
-
-    <div class="container3">
-        <div class="box1">
-            <h2>GET IN TOUCH</h2>
-            <h1>We provide professional logistics and <br> transport
-                solutions for your business</h1>
-        </div>
-        <button class="btn6">EXPLORE MORE</button>
-    </div>
-
-    <!-- container 4 -->
-    <div class="container4">
-        <div class="box1" data-aos="fade-up" data-aos-duration="1000">
-            <h3 style="color: #fd5523;">OUR SERVICES</h3>
-            <h1>Reliable Solutions for All Your Transport <br>Needs</h1>
-            <p>We offer a wide range of logistics and transportation services designed to streamline your supply chain.
-                From freight forwarding to last-mile delivery, our expert team ensures your goods reach their
-                destination safely, efficiently, and on time.</p>
-        </div>
-        <div class="wrapper">
-            <div class="box2" data-aos="fade-down" data-aos-duration="500">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-2.jpg" alt=""
-                    height="233px" width="400px">
-                <div class="d1">
-                    <h2>International Shipping</h2><br>
-                    <p>Our global network enables seamless cross-border transport solution with real-time tracking and
-                        customs handling.</p><br>
-                    <button class="btn7">Read More</button>
-                </div>
-            </div>
-            <div class="box2" data-aos="fade-down" data-aos-duration="1000">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-3.jpg" alt=""
-                    height="233px" width="400px">
-                <div class="d1">
-                    <h2>Express Cargo Delivery</h2><br>
-                    <p>Time-senstivw shipments? Our express cargo service ensures speed without compromising
-                        reliability.</p><br>
-                    <button class="btn7">Read More</button>
-                </div>
-            </div>
-            <div class="box2" data-aos="fade-down" data-aos-duration="1000">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-1.jpg" alt=""
-                    height="233px" width="400px">
-                <div class="d1">
-                    <h2>Domestic Freight Solution</h2><br>
-                    <p>WE offer reliable domestic freight solution that ensure safe,efficient,and on-time delivery
-                        across regions.</p><br>
-                    <button class="btn7">Read More</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- container 5 -->
-
-    <div class="container5">
-        <div class="box1" data-aos="zoom-in-right" data-aos-duration="1000">
-            <h2>OUR PROJECTS</h2>
-            <h1>How We Execute Our Logistics & Transport Projects</h1>
-            <p>From planning to final delivery, we manage every stage of your logistics project with precision,
-                efficiency, and care.</p>
-            <div class="box2">
-                <div class="b1"><span style="color: #fd5523;"><i class="fa-solid fa-truck-moving fa-xl"></i></span>
-                </div>
-                <div class="b2">
-                    <h4>Logiflow Our Delivery Process</h4>
-                </div>
-            </div>
-            <div class="box3">
-                <div class="b1"><span><i class="fa-solid fa-warehouse fa-xl"></i><span></div>
-                <div class="b2">
-                    <h4>Smart Storage Our warehousing</h4>
-                </div>
-            </div>
-            <div class="box3">
-                <div class="b1"><span><i class="fa-solid fa-truck-fast fa-xl"></i><span></div>
-                <div class="b2">
-                    <h4>FastTrack Real TimeTransport Ops</h4>
-                </div>
-            </div>
-            <div class="box3">
-                <div class="b1"><span><i class="fa-solid fa-network-wired fa-xl"></i><span></div>
-                <div class="b2">
-                    <h4>ChainLink Supply Chain Excution</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="box4" data-aos="zoom-in-up" data-aos-duration="1000">
-            <img src="https://themes.incognitothemes.com/logiport/assets/images/industrial-1.jpg" alt="" height="395px"
-                width="100%">
-            <div class="box4-1">
-                <h2>LogiFlow Our Delivery Process</h2>
-                <p>We begin by analyzing client requirements, mapping optimized delivery routes, and assigning cargo to
-                    the best-fit carriers for reliable and timely transportation.</p>
-                <button class="btn8">Work With Us</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- container 6  -->
-
-    <div class="container6">
-        <div class="box1" data-aos="fade-up" data-aos-duration="1000">
-            <h3 style="color: #fd5523;">OUR BLOGS</h3>
-            <h1>Logistics News & Industry Updates</h1>
-            <p>Stay informed with the latest trends, insights, and updates from the logistics and transport industry.
-                From supply chain strategies to delivery innovations, we cover it all.</p>
-        </div>
-        <div class="wrapper">
-            <div class="box2" data-aos="fade-up" data-aos-duration="500">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-1.jpg" alt="">
-                <div class="d1">
-                    <h2>The Future of Freight: Trends to Watch</h2><br>
-                    <div class="d2">
-                        <p><span><i class="fa-solid fa-calendar"></i></span>&nbsp; April 2, 2025</p>
-                        <p><span><i class="fa-solid fa-tag"></i></span>&nbsp;Logistics Insights</p>
-                    </div>
-                    <p>Discover how technology and automation are shaping the future of freight transportation and
-                        boosting efficiency across industries.</p><br>
-                    <button class="btn9">Learn More</button>
-                </div>
-            </div>
-            <div class="box2" data-aos="fade-up" data-aos-duration="1000">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-2.jpg" alt=""
-                    height="233px" width="400px">
-                <div class="d1">
-                    <h2>Optimizing Warehouse Operations in 2025</h2><br>
-                    <div class="d2">
-                        <p><span><i class="fa-solid fa-calendar"></i></span>&nbsp; April 2, 2025</p>
-                        <p><span><i class="fa-solid fa-tag"></i></span>&nbsp;Warehousing</p>
-                    </div>
-                    <p>Explore modern warehousing trends including automation, smart tracking, and layout optimization
-                        for smoother operations.
-                    <p><br>
-                        <button class="btn9">Learn More</button>
-                </div>
-            </div>
-            <div class="box2" data-aos="fade-up" data-aos-duration="1500">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-3.jpg" alt=""
-                    height="233px" width="400px">
-                <div class="d1">
-                    <h2>How Real-Time Tracking Transforms Logistics</h2><br>
-                    <div class="d2">
-                        <p><span><i class="fa-solid fa-calendar"></i></span>&nbsp; April 2, 2025</p>
-                        <p><span><i class="fa-solid fa-tag"></i></span>&nbsp;Transport Tech</p>
-                    </div>
-                    <p>Learn how real-time tracking improves visibility, reduces delays, and enhances customer
-                        satisfaction in supply chain operations.
-                    <p><br>
-                        <button class="btn9">Learn More</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- container 7 -->
-
-    <div class="container7">
-        <div class="box1" data-aos="fade-up">
-            <h2 style="color: #fd5523;">OUR TEAM</h2>
-            <h1>Experts in Logistics & Transport Solutions</h1>
-            <p>Meet the professionals behind our success a dedicated team with deep expertise in supply chain
-                management, freight operations, and customer service to deliver seamless logistics experiences.</p>
-        </div>
-        <div class="wrapper">
-            <div class="box" data-aos="zoom-in-right" data-aos-duration="1500">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-1.jpg" alt="" width="100%">
-                <div class="b1">
-                    <h2>Lucas Muller</h2>
-                    <p>Operations Manager</p>
-                </div>
-            </div>
-            <div class="box" data-aos="zoom-in-right" data-aos-duration="1500">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-2.jpg" alt="" width="100%">
-                <div class="b1">
-                    <h2>Isabelle Laurent</h2>
-                    <p>Supply Chain Analyst</p>
-                </div>
-            </div>
-            <div class="box" data-aos="zoom-in-right" data-aos-duration="1500">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-3.jpg" alt="" width="100%">
-                <div class="b1">
-                    <h2>Isabelle Laurent</h2>
-                    <p>Fleet Coordinatorr</p>
-                </div>
-            </div>
-            <div class="box" data-aos="zoom-in-right" data-aos-duration="1500">
-                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-4.jpg" alt="" width="100%">
-                <div class="b1">
-                    <h2>Elena Rossi</h2>
-                    <p>Logistics Specialist</p>
-                </div>
             </div>
 
-        </div>
-    </div>
+            <!-- MENU -->
+            <ul class="hidden lg:flex items-center gap-8 font-medium text-[17px]">
 
-    <!-- container 8 -->
-
-    <div class="container8">
-        <div class="box1">
-            <h2 style="color: #fd5523;">Testimonial</h2>
-            <h1>What Our Clients Say About Our Logistics Services</h1>
-            <p>Hear directly from our customers who trust Logiport for reliable shipping, on-time delivery, and seamless
-                logistics solutions across the globe.
-            </p>
-            <button class="btn10">View All Reviews</button>
-        </div>
-        <div class="box2">
-            <div class="box2-1">
-                <div class="b1">
-                    <img src="https://themes.incognitothemes.com/logiport/assets/images/testimonial-1.jpg" alt=""
-                        style="border: 2px solid #fd5523;">
-                </div>
-                <div class="b2">
-                    <h2 style="color: #fd5523;">Thomes Keller</h2>
-                    <p>Manager</p>
-                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"
-                            id="star1"></i></span>
-                </div>
-            </div>
-            <div class="box2-2">
-                <div class="b3">
-                    <p>We've worked with many providers, but this team truly delivers.Fast shipping, real-time tracking,
-                        and exceptional customer support highly recommended</p>
-                </div>
-            </div>
-        </div>
-        <div class="box2">
-            <div class="box2-1">
-                <div class="b1">
-                    <img src="https://themes.incognitothemes.com/logiport/assets/images/testimonial-2.jpg" alt=""
-                        style="border: 2px solid #fd5523;">
-                </div>
-                <div class="b2">
-                    <h2 style="color: #fd5523;">Elena Novak</h2>
-                    <p>Coordinater</p>
-                    <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"
-                            id="star1"></i></span>
-                </div>
-            </div>
-            <div class="box2-2">
-                <div class="b3">
-                    <p>Their logistics solutions are seamless.Our shipments arrive on time and in perfect condition.The
-                        team is professional and always willing to help.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- container 9 -->
-
-    <div class="container9">
-        <div class="box1">
-            <h2 style="color: #fd5523;">SOME IMPORTANT FAQ's</h2>
-            <h1>Frequently Asked Questions About Our Logistics Services</h1>
-            <p style="color: gray;">Find answers to the most common questions our clients have about shipping, delivery
-                timelines, customs
-                clearance, tracking, and more. We’re here to ensure your logistics journey is smooth and stress-free.
-            </p>
-            <button class="btn11">Have Any Questions</button>
-        </div>
-        <div class="box2">
-            <ul>
-                <li>
-                    <h4>Q: How do I book a logistics service with your company?</h4>
-                    <ol class="dl">
-                        <li>A: You can easily book a service by filling out our online booking form or contacting our
-                            customer support. We’ll assist you in selecting the right transport solution for your needs.
-                        </li>
-                    </ol>
+                <li class="text-[#fd5523] cursor-pointer">
+                    Home
                 </li>
-                <li>
-                    <h4>Q: What types of logistics services do you offer?</h4>
-                    <ol class="dl">
-                        <li>A: We offer a wide range of logistics solutions including freight forwarding, warehousing,
-                            last-mile delivery, international shipping, and supply chain management.
-                        </li>
-                    </ol>
+
+                <li class="hover:text-[#fd5523] duration-300 cursor-pointer">
+                    About
                 </li>
-                <li>
-                    <h4>Q: How can I track my shipment?</h4>
-                    <ol class="dl">
-                        <li>A: Once your shipment is booked, you’ll receive a tracking ID. Use our website’s tracking
-                            tool to get real-time updates on your delivery status.
-                        </li>
-                    </ol>
+
+                <li class="hover:text-[#fd5523] duration-300 cursor-pointer">
+                    Services
                 </li>
-                <li>
-                    <h4>Q: What are your payment and billing options?</h4>
-                    <ol class="dl">
-                        <li>A: We accept multiple payment methods including credit/debit cards, bank transfers, and
-                            digital wallets. Invoicing and billing details are available upon request or during
-                            checkout.
-                        </li>
-                    </ol>
+
+                <li class="hover:text-[#fd5523] duration-300 cursor-pointer">
+                    Blog
+                </li>
+
+                <li class="hover:text-[#fd5523] duration-300 cursor-pointer">
+                    Pages
+                </li>
+
+                <li class="hover:text-[#fd5523] duration-300 cursor-pointer">
+                    Contact
                 </li>
 
             </ul>
-        </div>
-    </div>
-    <!-- container 10 -->
 
-    <div class="container10">
-        <div class="wrapper">
-            <div class="box1">
-            <div class="input-area">
-                <input type="email" placeholder="Email address to Subscribe" required>
-                <button class="btn12">Subscribe</button>
+            <!-- BUTTONS -->
+            <div class="flex items-center gap-3">
+
+                <!-- SEARCH -->
+                <button
+                    class="w-[45px] h-[45px] rounded-lg bg-[#fd5523] text-white hover:bg-white hover:text-[#fd5523] border border-[#fd5523] duration-300">
+
+                    <i class="ri-search-line text-xl"></i>
+
+                </button>
+
+                <!-- GET SOLUTION -->
+                <button
+                    class="hidden sm:block px-5 py-2 rounded-lg bg-[#fd5523] text-white font-medium hover:bg-white hover:text-[#fd5523] border border-[#fd5523] duration-300">
+
+                    Get Solution
+
+                </button>
+
+                <!-- MOBILE MENU -->
+                <button class="lg:hidden w-[45px] h-[45px] rounded-lg border border-[#fd5523] text-[#fd5523]">
+
+                    <i class="ri-menu-line text-2xl"></i>
+
+                </button>
+
             </div>
         </div>
-        <div class="box2">
-            <span><i class="fa-brands fa-facebook-f"></i></span>
-            <span><i class="fa-brands fa-x-twitter"></i></span>
-            <span><i class="fa-brands fa-instagram"></i></span>
-            <span><i class="fa-brands fa-linkedin-in"></i></span>
+
+    </nav>
+
+    <!------------------------------------------->
+
+    <!-- 1 hero section -->
+    <section
+        class="relative w-full min-h-[80vh] sm:min-h-screen flex items-center sm:items-end pt-[100px] sm:pt-[130px]">
+
+        <!-- bg img -->
+        <div class="absolute inset-0">
+
+            <img src="./images/slide-1.jpg" alt="hero" class="w-full h-full object-cover" />
+
+            <!-- dark overlay -->
+            <div class="absolute inset-0 bg-black/40"></div>
+
         </div>
+
+        <!-- content -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+
+            <div class="flex min-h-[80vh] sm:min-h-screen items-center sm:items-end">
+
+                <div class="max-w-2xl text-white pb-10 sm:pb-16 lg:pb-24">
+
+                    <!-- SMALL TITLE -->
+                    <h3 data-aos="fade-up" data-aos-delay="100"
+                        class="tracking-[3px] text-sm sm:text-base uppercase text-white/90 text-center sm:text-left">
+
+                        Logistics & Transport Services
+
+                    </h3>
+
+                    <!-- MAIN HEADING -->
+                    <h1 data-aos="fade-up" data-aos-delay="200"
+                        class="mt-4 text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-center sm:text-left">
+
+                        Experience Seamless <br />
+                        Shipping Solutions
+
+                    </h1>
+
+                    <!-- DESCRIPTION -->
+                    <p data-aos="fade-up" data-aos-delay="300"
+                        class="mt-5 text-gray-200 text-sm sm:text-base leading-relaxed text-center sm:text-left">
+
+                        We specialize in fast, reliable, and efficient logistics and transport services
+                        to keep your business moving forward on time and with care.
+
+                    </p>
+
+                    <!-- BUTTONS -->
+                    <div data-aos="zoom-in" data-aos-delay="400"
+                        class="flex flex-wrap gap-4 mt-8 justify-center sm:justify-start">
+
+                        <button class="px-6 py-3 bg-[#fd5523] text-white rounded-lg font-medium
+                        hover:bg-white hover:text-[#fd5523] border border-[#fd5523] transition">
+
+                            Contact Us
+
+                        </button>
+
+                        <button class="px-6 py-3 border border-white text-white rounded-lg
+                        hover:bg-white hover:text-black transition">
+
+                            Our Mission
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="box3">
-            <div class="box3-1">
-                <h1>Logiport</h1>
-                <p>At Logiport, we specialize in seamless logistics and transport
-                    solutions tailored to meet your
-                    business needs.</p>
+
+    </section>
+
+    <!-- 2 about section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <!-- left content -->
+            <div>
+
+                <h2 data-aos="fade-right" class="text-[#fd5523] font-semibold tracking-[3px] text-sm">
+                    ABOUT US
+                </h2>
+
+                <h1 data-aos="fade-right" data-aos-delay="100"
+                    class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                    Delivering Excellence in Logistics and Transportation
+                </h1>
+
+                <!-- FEATURES -->
+                <div class="mt-8 space-y-6">
+
+                    <div data-aos="fade-up" data-aos-delay="150" class="flex items-start gap-4">
+                        <i class="ri-truck-line text-3xl text-[#fd5523]"></i>
+                        <h3 class="font-semibold text-lg">Reliable Freight Services</h3>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="250" class="flex items-start gap-4">
+                        <i class="ri-route-line text-3xl text-[#fd5523]"></i>
+                        <h3 class="font-semibold text-lg">
+                            End-to-End Supply Chain Solutions
+                        </h3>
+                    </div>
+
+                </div>
+
+                <!-- DESCRIPTION -->
+                <p data-aos="fade-up" data-aos-delay="300" class="mt-6 text-gray-600 leading-relaxed">
+                    We are a trusted logistics and transport company offering streamlined,
+                    cost-effective, and on-time delivery solutions across local and
+                    international routes.
+                </p>
+
+                <!-- CHECKLIST -->
+                <div data-aos="fade-up" data-aos-delay="350" class="mt-6 space-y-3 text-gray-700">
+
+                    <p class="flex items-center gap-2">
+                        <i class="ri-check-line text-[#fd5523]"></i>
+                        Timely and secure transportation services.
+                    </p>
+
+                    <p class="flex items-center gap-2">
+                        <i class="ri-check-line text-[#fd5523]"></i>
+                        Integrated warehousing and distribution.
+                    </p>
+
+                    <p class="flex items-center gap-2">
+                        <i class="ri-check-line text-[#fd5523]"></i>
+                        Customized logistics solutions for your business.
+                    </p>
+
+                </div>
+
+                <!-- BUTTON -->
+                <button data-aos="zoom-in" data-aos-delay="400" class="mt-8 px-6 py-3 bg-[#fd5523] text-white rounded-lg
+                hover:bg-white hover:text-[#fd5523] border border-[#fd5523] transition">
+
+                    Contact Us
+
+                </button>
+
             </div>
-            <div class="box3-2">
-                <h1>Quick Links</h1>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Service</a></li>
-                    <li><a href="">Testimonials</a></li>
-                    <li><a href="">Caontact Us</a></li>
-                </ul>
+
+            <!-- right grid -->
+            <div class="relative">
+
+                <!-- main img -->
+                <img data-aos="zoom-in" src="https://themes.incognitothemes.com/logiport/assets/images/about-1.jpg"
+                    class="w-full rounded-md" alt="about" />
+
+                <!-- small img -->
+                <img data-aos="fade-up" src="https://themes.incognitothemes.com/logiport/assets/images/about-2.jpg"
+                    class="w-[150px] absolute bottom-5 left-5 lg:w-[220px]
+                rounded-md shadow-lg
+                mt-4 lg:mt-0
+                lg:absolute lg:bottom-[-30px] lg:left-[-20px]" alt="about small" />
+
+                <!-- experience box -->
+                <div data-aos="flip-left"
+                    class="absolute top-6 right-6 bg-white shadow-lg px-6 py-4 rounded-lg text-center">
+
+                    <h1 class="text-3xl font-bold text-[#fd5523]">25+</h1>
+                    <p class="text-sm text-gray-600">Years of Experience</p>
+
+                </div>
+
             </div>
-            <div class="box3-2">
-                <h1>Logistics Services</h1>
-                <ul>
-                    <li><a href="">Freight Forwarding</a></li>
-                    <li><a href="">Warehousing</a></li>
-                    <li><a href="">Last Mile Delivery</a></li>
-                    <li><a href="">Customs Clearance</a></li>
-                    <li><a href="">Supply Chain Management</a></li>
-                </ul>
-            </div>
-            <div class="box3-3">
-                <h1>Contact Info</h1>
-                <ul>
-                    <li><a href=""><span><i class="fa-solid fa-location-dot"></i></span>&nbsp;123 Street, New York,
-                            USA</a></li>
-                    <li><a href=""><span><i class="fa-solid fa-envelope"></i></span>&nbsp;info@example.com</a></li>
-                    <li><a href=""><span><i class="fa-solid fa-print"></i></span>&nbsp;+012 345 67890</a></li>
-                </ul>
-            </div>
+
         </div>
+
+    </section>
+
+    <!-- 3 get in touch -->
+    <section class="relative w-full bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                    url('https://themes.incognitothemes.com/logiport/assets/images/banner-img.jpg');">
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-20 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+            <!-- text -->
+            <div class="text-center lg:text-left text-white max-w-2xl">
+
+                <h2 data-aos="fade-up" class="text-[#fd5523] tracking-[3px] text-sm sm:text-base font-semibold">
+                    GET IN TOUCH
+                </h2>
+
+                <h1 data-aos="fade-up" data-aos-delay="150"
+                    class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                    We provide professional logistics and transport solutions for your business
+                </h1>
+
+            </div>
+
+            <!-- btn -->
+            <button data-aos="zoom-in" data-aos-delay="250" class="px-8 py-3 bg-[#fd5523] text-white font-medium rounded-lg
+            hover:bg-white hover:text-[#fd5523] border border-[#fd5523]
+            transition duration-300">
+
+                EXPLORE MORE
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- 4 service section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
+
+        <!-- header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <h3 data-aos="fade-up" class="text-[#fd5523] font-semibold tracking-[3px] text-sm">
+                OUR SERVICES
+            </h3>
+
+            <h1 data-aos="fade-up" data-aos-delay="100"
+                class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                Reliable Solutions for All Your Transport Needs
+            </h1>
+
+            <p data-aos="fade-up" data-aos-delay="200" class="mt-4 text-gray-600 leading-relaxed text-sm sm:text-base">
+                We offer a wide range of logistics and transportation services designed to streamline your supply chain.
+                From freight forwarding to last-mile delivery, our expert team ensures your goods reach their
+                destination
+                safely, efficiently, and on time.
+            </p>
+
+        </div>
+
+        <!-- cards -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- CARD 1 -->
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-2.jpg"
+                    class="w-full h-56 object-cover" alt="service" />
+
+                <div class="p-6">
+
+                    <h2 class="text-xl font-semibold">
+                        International Shipping
+                    </h2>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Our global network enables seamless cross-border transport solution with real-time tracking and
+                        customs handling.
+                    </p>
+
+                    <button class="mt-5 text-[#fd5523] font-medium hover:underline">
+                        Read More
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-3.jpg"
+                    class="w-full h-56 object-cover" alt="service" />
+
+                <div class="p-6">
+
+                    <h2 class="text-xl font-semibold">
+                        Express Cargo Delivery
+                    </h2>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        Time-sensitive shipments? Our express cargo service ensures speed without compromising
+                        reliability.
+                    </p>
+
+                    <button class="mt-5 text-[#fd5523] font-medium hover:underline">
+                        Read More
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div data-aos="fade-up" data-aos-delay="300"
+                class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-1.jpg"
+                    class="w-full h-56 object-cover" alt="service" />
+
+                <div class="p-6">
+
+                    <h2 class="text-xl font-semibold">
+                        Domestic Freight Solution
+                    </h2>
+
+                    <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                        We offer reliable domestic freight solution that ensure safe, efficient, and on-time delivery
+                        across regions.
+                    </p>
+
+                    <button class="mt-5 text-[#fd5523] font-medium hover:underline">
+                        Read More
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 5 our projects -->
+    <div class="w-full bg-[#111212]">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+
+                <!-- LEFT CONTENT -->
+                <div>
+
+                    <h2 data-aos="fade-right" class="text-[#fd5523] font-semibold tracking-[3px] text-sm">
+                        OUR PROJECTS
+                    </h2>
+
+                    <h1 data-aos="fade-right" data-aos-delay="100"
+                        class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
+                        How We Execute Our Logistics & Transport Projects
+                    </h1>
+
+                    <p data-aos="fade-right" data-aos-delay="200" class="mt-4 text-gray-200 leading-relaxed">
+                        From planning to final delivery, we manage every stage of your logistics project with precision,
+                        efficiency, and care.
+                    </p>
+
+                    <!-- LIST ITEMS -->
+                    <div class="mt-8 space-y-4">
+
+                        <div data-aos="fade-up" data-aos-delay="100"
+                            class="flex items-center gap-4 p-4 border border-gray-700 rounded-lg hover:shadow-md transition">
+
+                            <i class="ri-truck-line text-2xl text-[#fd5523]"></i>
+
+                            <h4 class="font-medium text-white">
+                                LogiFlow – Our Delivery Process
+                            </h4>
+
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="200"
+                            class="flex items-center gap-4 p-4 border border-gray-700 rounded-lg hover:shadow-md transition">
+
+                            <i class="ri-warehouse-line text-2xl text-[#fd5523]"></i>
+
+                            <h4 class="font-medium text-white">
+                                Smart Storage – Warehousing
+                            </h4>
+
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="300"
+                            class="flex items-center gap-4 p-4 border border-gray-700 rounded-lg hover:shadow-md transition">
+
+                            <i class="ri-truck-fill text-2xl text-[#fd5523]"></i>
+
+                            <h4 class="font-medium text-white">
+                                FastTrack – Real Time Transport Ops
+                            </h4>
+
+                        </div>
+
+                        <div data-aos="fade-up" data-aos-delay="400"
+                            class="flex items-center gap-4 p-4 border border-gray-700 rounded-lg hover:shadow-md transition">
+
+                            <i class="ri-node-tree text-2xl text-[#fd5523]"></i>
+
+                            <h4 class="font-medium text-white">
+                                ChainLink – Supply Chain Execution
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="space-y-6 h-full flex flex-col justify-between">
+
+                    <!-- IMAGE CARD -->
+                    <div data-aos="zoom-in" class="rounded-lg overflow-hidden shadow-md">
+
+                        <img src="https://themes.incognitothemes.com/logiport/assets/images/industrial-1.jpg"
+                            class="w-full h-72 object-cover" alt="project" />
+
+                    </div>
+
+                    <!-- INFO BOX -->
+                    <div data-aos="fade-up" data-aos-delay="200" class="bg-white shadow-md rounded-lg p-6">
+
+                        <h2 class="text-xl font-semibold">
+                            LogiFlow Our Delivery Process
+                        </h2>
+
+                        <p class="mt-3 text-gray-600 leading-relaxed">
+                            We begin by analyzing client requirements, mapping optimized delivery routes, and assigning
+                            cargo to
+                            the best-fit carriers for reliable and timely transportation.
+                        </p>
+
+                        <button
+                            class="mt-5 px-6 py-3 bg-[#fd5523] text-white rounded-lg hover:bg-white hover:text-[#fd5523] border border-[#fd5523] transition">
+
+                            Work With Us
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
     </div>
 
+    <!-- 6 our blogs -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
+
+        <!-- HEADER -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <h3 class="text-[#fd5523] font-semibold tracking-[3px] text-sm">
+                OUR BLOGS
+            </h3>
+
+            <h1 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                Logistics News & Industry Updates
+            </h1>
+
+            <p class="mt-4 text-gray-600 leading-relaxed text-sm sm:text-base">
+                Stay informed with the latest trends, insights, and updates from the logistics and transport industry.
+                From supply chain strategies to delivery innovations, we cover it all.
+            </p>
+
+        </div>
+
+        <!-- BLOG GRID -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- BLOG CARD 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-1.jpg"
+                    class="w-full h-56 object-cover" alt="blog" />
+
+                <div class="p-6">
+
+                    <h2 class="text-xl font-semibold">
+                        The Future of Freight: Trends to Watch
+                    </h2>
+
+                    <!-- META -->
+                    <div class="flex flex-wrap gap-4 text-sm text-gray-500 mt-3">
+
+                        <span class="flex items-center gap-1">
+                            <i class="ri-calendar-line text-[#fd5523]"></i>
+                            April 2, 2025
+                        </span>
+
+                        <span class="flex items-center gap-1">
+                            <i class="ri-price-tag-3-line text-[#fd5523]"></i>
+                            Logistics Insights
+                        </span>
+
+                    </div>
+
+                    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                        Discover how technology and automation are shaping the future of freight transportation and
+                        boosting efficiency across industries.
+                    </p>
+
+                    <button class="mt-5 text-[#fd5523] font-medium hover:underline">
+                        Learn More
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- BLOG CARD 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-2.jpg"
+                    class="w-full h-56 object-cover" alt="blog" />
+
+                <div class="p-6">
+
+                    <h2 class="text-xl font-semibold">
+                        Optimizing Warehouse Operations in 2025
+                    </h2>
+
+                    <div class="flex flex-wrap gap-4 text-sm text-gray-500 mt-3">
+
+                        <span class="flex items-center gap-1">
+                            <i class="ri-calendar-line text-[#fd5523]"></i>
+                            April 2, 2025
+                        </span>
+
+                        <span class="flex items-center gap-1">
+                            <i class="ri-price-tag-3-line text-[#fd5523]"></i>
+                            Warehousing
+                        </span>
+
+                    </div>
+
+                    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                        Explore modern warehousing trends including automation, smart tracking, and layout optimization
+                        for smoother operations.
+                    </p>
+
+                    <button class="mt-5 text-[#fd5523] font-medium hover:underline">
+                        Learn More
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- BLOG CARD 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/commercial-3.jpg"
+                    class="w-full h-56 object-cover" alt="blog" />
+
+                <div class="p-6">
+
+                    <h2 class="text-xl font-semibold">
+                        How Real-Time Tracking Transforms Logistics
+                    </h2>
+
+                    <div class="flex flex-wrap gap-4 text-sm text-gray-500 mt-3">
+
+                        <span class="flex items-center gap-1">
+                            <i class="ri-calendar-line text-[#fd5523]"></i>
+                            April 2, 2025
+                        </span>
+
+                        <span class="flex items-center gap-1">
+                            <i class="ri-price-tag-3-line text-[#fd5523]"></i>
+                            Transport Tech
+                        </span>
+
+                    </div>
+
+                    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                        Learn how real-time tracking improves visibility, reduces delays, and enhances customer
+                        satisfaction in supply chain operations.
+                    </p>
+
+                    <button class="mt-5 text-[#fd5523] font-medium hover:underline">
+                        Learn More
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 7 our team -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
+
+        <!-- header -->
+        <div class="text-center max-w-3xl mx-auto">
+
+            <h2 class="text-[#fd5523] font-semibold tracking-[3px] text-sm">
+                OUR TEAM
+            </h2>
+
+            <h1 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                Experts in Logistics & Transport Solutions
+            </h1>
+
+            <p class="mt-4 text-gray-600 leading-relaxed text-sm sm:text-base">
+                Meet the professionals behind our success — a dedicated team with deep expertise in supply chain
+                management, freight operations, and customer service to deliver seamless logistics experiences.
+            </p>
+
+        </div>
+
+        <!-- team grid -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <!-- CARD 1 -->
+            <div
+                class="bg-white rounded-xl shadow-md overflow-hidden group hover:-translate-y-1 hover:shadow-xl transition duration-300">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-1.jpg"
+                    class="w-full h-[450px] lg:h-[320px] object-cover object-top group-hover:scale-105 transition duration-300"
+                    alt="team" />
+
+                <div class="p-5 text-center">
+                    <h2 class="text-lg font-semibold">Lucas Muller</h2>
+                    <p class="text-gray-500 text-sm">Operations Manager</p>
+                </div>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div
+                class="bg-white rounded-xl shadow-md overflow-hidden group hover:-translate-y-1 hover:shadow-xl transition duration-300">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-2.jpg"
+                    class="w-full h-[450px] lg:h-[320px] object-cover object-top group-hover:scale-105 transition duration-300"
+                    alt="team" />
+
+                <div class="p-5 text-center">
+                    <h2 class="text-lg font-semibold">Isabelle Laurent</h2>
+                    <p class="text-gray-500 text-sm">Supply Chain Analyst</p>
+                </div>
+
+            </div>
+
+            <!-- CARD 3 -->
+            <div
+                class="bg-white rounded-xl shadow-md overflow-hidden group hover:-translate-y-1 hover:shadow-xl transition duration-300">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-3.jpg"
+                    class="w-full h-[450px] lg:h-[320px] object-cover object-top group-hover:scale-105 transition duration-300"
+                    alt="team" />
+
+                <div class="p-5 text-center">
+                    <h2 class="text-lg font-semibold">Isabelle Laurent</h2>
+                    <p class="text-gray-500 text-sm">Fleet Coordinator</p>
+                </div>
+
+            </div>
+
+            <!-- CARD 4 -->
+            <div
+                class="bg-white rounded-xl shadow-md overflow-hidden group hover:-translate-y-1 hover:shadow-xl transition duration-300">
+
+                <img src="https://themes.incognitothemes.com/logiport/assets/images/team-4.jpg"
+                    class="w-full h-[450px] lg:h-[320px] object-cover object-top group-hover:scale-105 transition duration-300"
+                    alt="team" />
+
+                <div class="p-5 text-center">
+                    <h2 class="text-lg font-semibold">Elena Rossi</h2>
+                    <p class="text-gray-500 text-sm">Logistics Specialist</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 8 testimonials -->
+    <div class="w-full bg-[#111212]">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+
+                <!-- LEFT CONTENT -->
+                <div class="lg:col-span-1">
+
+                    <h2 class="text-[#fd5523] font-semibold tracking-[3px] text-sm">
+                        TESTIMONIAL
+                    </h2>
+
+                    <h1 class="mt-3 text-3xl sm:text-4xl font-bold leading-tight text-white">
+                        What Our Clients Say About Our Logistics Services
+                    </h1>
+
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        Hear directly from our customers who trust Logiport for reliable shipping, on-time delivery, and
+                        seamless logistics solutions across the globe.
+                    </p>
+
+                    <button
+                        class="mt-6 px-6 py-3 bg-[#fd5523] text-white rounded-lg hover:bg-white hover:text-[#fd5523] border border-[#fd5523] transition">
+
+                        View All Reviews
+
+                    </button>
+
+                </div>
+
+                <!-- TESTIMONIAL CARD 1 -->
+                <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition border border-[#fd5523]">
+
+                    <div class="flex items-center gap-4">
+
+                        <img src="https://themes.incognitothemes.com/logiport/assets/images/testimonial-1.jpg"
+                            class="w-16 h-16 rounded-full border-2 border-[#fd5523]" alt="client" />
+
+                        <div>
+
+                            <h2 class="text-[#fd5523] font-semibold">
+                                Thomas Keller
+                            </h2>
+
+                            <p class="text-gray-500 text-sm">
+                                Manager
+                            </p>
+
+                            <!-- STARS -->
+                            <div class="flex gap-1 mt-1 text-[#fd5523]">
+
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                        We've worked with many providers, but this team truly delivers. Fast shipping, real-time
+                        tracking,
+                        and exceptional customer support highly recommended.
+                    </p>
+
+                </div>
+
+                <!-- TESTIMONIAL CARD 2 -->
+                <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition border border-[#fd5523]">
+
+                    <div class="flex items-center gap-4">
+
+                        <img src="https://themes.incognitothemes.com/logiport/assets/images/testimonial-2.jpg"
+                            class="w-16 h-16 rounded-full border-2 border-[#fd5523]" alt="client" />
+
+                        <div>
+
+                            <h2 class="text-[#fd5523] font-semibold">
+                                Elena Novak
+                            </h2>
+
+                            <p class="text-gray-500 text-sm">
+                                Coordinator
+                            </p>
+
+                            <!-- STARS -->
+                            <div class="flex gap-1 mt-1 text-[#fd5523]">
+
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="mt-4 text-gray-600 text-sm leading-relaxed">
+                        Their logistics solutions are seamless. Our shipments arrive on time and in perfect condition.
+                        The team is professional and always willing to help.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+    <!-- 9 faq -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <!-- left content -->
+            <div>
+
+                <h2 class="text-[#fd5523] font-semibold tracking-[3px] text-sm">
+                    SOME IMPORTANT FAQ's
+                </h2>
+
+                <h1 class="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                    Frequently Asked Questions About Our Logistics Services
+                </h1>
+
+                <p class="mt-4 text-gray-600 leading-relaxed">
+                    Find answers to the most common questions our clients have about shipping, delivery timelines,
+                    customs clearance, tracking, and more.
+                </p>
+
+                <button
+                    class="mt-6 px-6 py-3 bg-[#fd5523] text-white rounded-lg hover:bg-white hover:text-[#fd5523] border border-[#fd5523] transition">
+
+                    Have Any Questions
+
+                </button>
+
+            </div>
+
+            <!-- right accordion -->
+            <div class="space-y-4">
+
+                <!-- item 1 -->
+                <div class="border rounded-lg overflow-hidden">
+
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full text-left p-5 font-semibold flex justify-between items-center">
+
+                        How do I book a logistics service?
+
+                        <i class="ri-add-line text-xl"></i>
+
+                    </button>
+
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5 text-gray-600 text-sm">
+                        You can book a service by filling out our online form or contacting support.
+                    </div>
+
+                </div>
+
+                <!-- item 2 -->
+                <div class="border rounded-lg overflow-hidden">
+
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full text-left p-5 font-semibold flex justify-between items-center">
+
+                        What logistics services do you offer?
+
+                        <i class="ri-add-line text-xl"></i>
+
+                    </button>
+
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5 text-gray-600 text-sm">
+                        We offer freight forwarding, warehousing, delivery, and supply chain management.
+                    </div>
+
+                </div>
+
+                <!-- item 3 -->
+                <div class="border rounded-lg overflow-hidden">
+
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full text-left p-5 font-semibold flex justify-between items-center">
+
+                        How can I track my shipment?
+
+                        <i class="ri-add-line text-xl"></i>
+
+                    </button>
+
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5 text-gray-600 text-sm">
+                        Use your tracking ID on our website for real-time updates.
+                    </div>
+
+                </div>
+
+                <!-- item 4 -->
+                <div class="border rounded-lg overflow-hidden">
+
+                    <button onclick="toggleFAQ(this)"
+                        class="w-full text-left p-5 font-semibold flex justify-between items-center">
+
+                        What are your payment options?
+
+                        <i class="ri-add-line text-xl"></i>
+
+                    </button>
+
+                    <div
+                        class="faq-content max-h-0 overflow-hidden transition-all duration-300 px-5 text-gray-600 text-sm">
+                        We accept cards, bank transfers, and digital wallets.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 footer -->
+    <footer class="bg-[#111] text-white">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-12">
+
+            <!--  -->
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-8 border-b border-gray-700 pb-10">
+
+                <!-- subscribe -->
+                <div class="flex flex-col sm:flex-row w-full lg:w-auto gap-3 sm:gap-0">
+
+                    <input type="email" placeholder="Email address to Subscribe"
+                        class="w-full sm:w-[300px] px-4 py-3 rounded-lg sm:rounded-r-none text-black outline-none" />
+
+                    <button
+                        class="px-6 py-3 bg-[#fd5523] text-white font-medium rounded-lg sm:rounded-l-none hover:bg-white hover:text-[#fd5523] transition">
+
+                        Subscribe
+
+                    </button>
+
+                </div>
+
+                <!-- social icons -->
+                <div class="flex gap-5 text-xl">
+
+                    <a href="#" class="hover:text-[#fd5523] transition">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+
+                    <a href="#" class="hover:text-[#fd5523] transition">
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+
+                    <a href="#" class="hover:text-[#fd5523] transition">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a href="#" class="hover:text-[#fd5523] transition">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- footer grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 text-start">
+
+                <!-- about -->
+                <div>
+                    <h1 class="text-2xl font-bold text-[#fd5523]">
+                        Logiport
+                    </h1>
+
+                    <p class="mt-4 text-gray-400 text-sm leading-relaxed">
+                        Seamless logistics and transport solutions tailored to meet your business needs.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">
+                        Quick Links
+                    </h2>
+
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-[#fd5523]">Home</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">About Us</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">Service</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- SERVICES -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">
+                        Logistics Services
+                    </h2>
+
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-[#fd5523]">Freight Forwarding</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">Warehousing</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">Last Mile Delivery</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">Customs Clearance</a></li>
+                        <li><a href="#" class="hover:text-[#fd5523]">Supply Chain Management</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="text-start">
+                    <h2 class="text-lg font-semibold mb-4">
+                        Contact Info
+                    </h2>
+
+                    <ul class="space-y-3 text-gray-400 text-sm">
+
+                        <li class="flex items-center justify-start gap-2">
+                            <i class="ri-map-pin-line text-[#fd5523]"></i>
+                            123 Street, New York, USA
+                        </li>
+
+                        <li class="flex items-center justify-start gap-2">
+                            <i class="ri-mail-line text-[#fd5523]"></i>
+                            info@example.com
+                        </li>
+
+                        <li class="flex items-center justify-start gap-2">
+                            <i class="ri-phone-line text-[#fd5523]"></i>
+                            +012 345 67890
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-6">
+
+                © 2026 Logiport. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- accordion -->
+    <script>
+        function toggleFAQ(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector("i");
+
+            if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+                content.style.maxHeight = "0px";
+                icon.classList.remove("ri-subtract-line");
+                icon.classList.add("ri-add-line");
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.classList.remove("ri-add-line");
+                icon.classList.add("ri-subtract-line");
+            }
+        }
+    </script>
+
+    <!-- aos animations -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-    AOS.init({
-      startEvent: 'DOMContentLoaded',
-      offset: 0,
-      duration: 1000,
-      easing: 'ease-in-out-cubic',
-      delay: 200,
-      once: false,               // 👈 animation triggers every scroll
-      mirror: true,              // 👈 replay animation when scrolling up
-      anchorPlacement: 'center-bottom',
-      disable: false
-    });
-
-    // Recalculate for mobile viewport height changes
-    window.addEventListener('resize', () => {
-      setTimeout(() => AOS.refreshHard(), 300);
-    });
-  </script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 120,
+            easing: "ease-in-out"
+        });
+    </script>
 </body>
 
 </html>
